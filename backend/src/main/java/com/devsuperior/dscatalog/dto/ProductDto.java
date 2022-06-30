@@ -5,12 +5,8 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
-import javax.persistence.Column;
-
 import com.devsuperior.dscatalog.entities.Category;
 import com.devsuperior.dscatalog.entities.Product;
-import com.sun.source.doctree.SerialDataTree;
 
 public class ProductDto implements Serializable  {
 	private static final long serialVersionUID = 1L;
