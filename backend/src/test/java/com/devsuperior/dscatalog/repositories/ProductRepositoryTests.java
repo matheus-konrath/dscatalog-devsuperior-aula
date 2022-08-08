@@ -56,4 +56,21 @@ public class ProductRepositoryTests {
             repository.deleteById(nonexistingId);
         });
     }
+
+    @Test
+    void findByIdShouldReturnOptionalWhenExistId() {
+
+        Optional<Product> result = repository.findById(existingId);
+
+        Assertions.assertTrue(result.isPresent());
+    } 
+
+    @Test
+    void findByIdShouldReturnOptionalWhenDoesntExistId() {
+
+        Optional<Product> result = repository.findById(nonexistingId);
+
+        Assertions.assertTrue(result.isEmpty());
+
+    }
 }
